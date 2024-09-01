@@ -31,8 +31,6 @@ export class AuthenticateUseCase {
       throw new InvalidCredentialsError()
     }
 
-    // const { password_hash, ...userWithoutPasswordHash } = user
-
     return {
       user,
     }
