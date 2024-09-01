@@ -1,0 +1,14 @@
+# docker run —name thoughts-api -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5433:5432 bitnami/postgresql
+
+version: '3'
+
+services:
+  thoughts-api:
+    image: bitnami/postgresql
+    container_name: thoughts-api
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=thoughts-api
+    ports:
+      - '5433:5432'
